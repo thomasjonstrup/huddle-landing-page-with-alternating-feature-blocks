@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+$hover-color: darken(hsl(71, 73%, 54%), 10%);
+$hover-primary-color: darken(hsl(322, 100%, 66%), 10%);
+$hover-secondary-color: darken(white, 10%);
+
+$breakpoints-up: (
+  "md": "750px",
+  "ld": "1024px",
+  "xd": "1376px",
+);
+
+$breakpoints-down: (
+  "md": "750px",
+  "ld": "1024px",
+  "xd": "1376px",
+);
+
+:root {
+	--font-heading: 'Poppins', sans-serif;
+	--font-body: 'Open Sans', sans-serif;;
+	--primary-color:  hsl(322, 100%, 66%);
+	--very-pale-cyan:  hsl(193, 100%, 96%);
+	--very-dark-cyan:  hsl(192, 100%, 9%);
+	--grayish-blue: hsl(208, 11%, 55%);
+
+	--text-xs: 0.75rem;
+	--text-sm: 0.875rem;
+	--text-md: 1rem;
+	--text-lg: 1.5rem;
+
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 2rem;
+
+	--rounded-sm: 8px;
+	--rounded: 16px;
+	--rounded-lg: 24px;
+
+	--shadow: 1px 10px 10px 2px rgba(0,0,0,0.15); //0px 4px 10px rgba(0, 0, 0, 0.05);
+	--shadow-light: -1px 7px 54px -20px hsl(218, 22%, 67%);
+	--shadow-btn: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+	--card-shadow: 0 0 5px hsl(208, 11%, 85%)
+}
+
+@mixin breakpoint-up($size) {
+  @media screen and (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+@mixin breakpoint-down($size) {
+  @media screen and (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
