@@ -23,9 +23,13 @@
 	width: 80%;
 	display: inline-block;
 
-	@include smUp {
-		width: 50%;
+	@include breakpoint-up('md') {
+		width: 15rem;
 	}
+
+/* 	@include smUp {
+		width: 50%;
+	} */
 
 	border-radius: var(--rounded-lg);
 
