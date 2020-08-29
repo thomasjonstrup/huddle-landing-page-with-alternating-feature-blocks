@@ -376,6 +376,7 @@ img {
 		padding: 0;
 		margin: 0;
 		flex-basis: 40%;
+		padding-right: 2rem;
 	}
 
 	&__text {
@@ -411,6 +412,15 @@ img {
 			flex-direction: row;
 		}
 	}
+
+	&__copyright {
+		display: flex;
+		justify-content: center;
+
+		@include smUp {
+			justify-content: flex-end;
+		}
+	}
 }
 
 .social__link {
@@ -429,7 +439,12 @@ img {
 
 .footer__listurls {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
+	margin-bottom: 3rem;
+
+	@include smUp {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .element {
